@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* General styles for responsiveness */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,10 +10,13 @@ body {
     background-color: white;
     color: #333;
     overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 header {
     padding-top: 0;
+    padding: 10px 20px;
 }
 
 nav {
@@ -40,7 +44,7 @@ nav {
 }
 
 .nav-logo span {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Adjust logo text size */
     font-weight: bold;
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -48,15 +52,16 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     padding-right: 30px;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em; /* Adjust link size */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease;
 }
@@ -371,4 +376,148 @@ nav {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+/* Responsive styles for tablets (768px and below) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 20px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .profile-pic {
+        width: 250px; /* Adjust image size */
+        height: 250px;
+    }
+
+    .about-text {
+        max-width: 90%; /* Reduce text container width */
+        padding: 15px;
+    }
+
+    .about-text h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    .about-text p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    .btn {
+        font-size: 0.9em; /* Adjust button size */
+        padding: 8px 20px;
+    }
+
+    .resume-container {
+        gap: 10px; /* Reduce gap between resume items */
+    }
+
+    .resume-item {
+        height: auto; /* Allow items to adjust height */
+        flex-direction: column; /* Stack heading and content vertically */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .resume-item h3 {
+        font-size: 1em; /* Adjust heading size */
+        margin-bottom: 10px;
+    }
+
+    .resume-item ul {
+        font-size: 0.9em; /* Adjust list font size */
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
+        gap: 20px; /* Add spacing between cards */
+        align-items: center; /* Center the cards */
+        height: auto; /* Allow the container to adjust its height */
+    }
+
+    .project-card {
+        width: 90%; /* Adjust card width to fit the screen */
+        margin: 0 auto; /* Center the cards horizontally */
+    }
+}
+
+/* Responsive styles for phones (480px and below) */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 5px;
+        
+    }
+
+    .profile-pic {
+        width: 200px; /* Further reduce image size */
+        height: 200px;
+    }
+
+    .about-text{
+        max-width: 95%; /* Further reduce text container width */
+        max-height: 200px;
+        padding: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8em; /* Adjust heading size */
+    }
+
+    .about-text p {
+        font-size: 0.9em; /* Adjust paragraph size */
+
+    }
+
+    .btn {
+        font-size: 0.8em; /* Adjust button size */
+        padding: 6px 15px;
+    }
+
+    .resume-item {
+        padding: 8px;
+    }
+
+    .resume-item h3 {
+        font-size: 0.9em; /* Adjust heading size */
+    }
+
+    .resume-item ul {
+        font-size: 0.8em; /* Adjust list font size */
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column; /* Ensure cards stack vertically */
+        gap: 15px; /* Reduce spacing for smaller screens */
+        align-items: center;
+        height: auto; /* Allow the container to adjust its height */
+    }
+
+    .project-card {
+        width: 100%; /* Make cards take full width */
+        margin: 0 auto;
+    }
+
+    .project-preview {
+        height: 150px; /* Adjust preview height for smaller screens */
+    }
+
+    .contact-info {
+        padding: 10px 15px; /* Adjust padding */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    footer p {
+        font-size: 0.8em; /* Adjust footer font size */
+    }
 }
