@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-logo">
-                <img src="flower3-svgrepo-com.svg" alt="Flower Icon" class="nav-icon">
+                <img src="{{ url_for('static', filename='flower3-svgrepo-com.svg') }}" alt="Flower Icon" class="nav-icon">
                 <span>MARISHEL</span>
             </div>
             <div class="nav-links">
@@ -24,11 +24,11 @@
 
     <section id="about" class="section">
         <div class="about-container">
-            <img src="HeadShot.jpeg" alt="Headshot of Marishel Lochan" class="profile-pic">
+            <img src="{{ url_for('static', filename='HeadShot.jpeg') }}" alt="Headshot of Marishel Lochan" class="profile-pic">
             <div class="about-text">
                 <h2>Hi! I'm Marishel Lochan</h2>
-                <p>Computer Science student specializing in data analysis. Skilled in Python, SQL, and C++ with experience in data automation, software development, and workflow optimization.</p>
-                <a href="Profile (3).pdf" class="btn" download="Marishel_Lochan_Resume.pdf">Download Resume</a>
+                <p>Computer Science student specializing in data analysis. Skilled in Python, SQL, and C++ with experience in data collection, organization, analysis and software development.</p>
+                <a href="{{ url_for('static', filename='Profile (3).pdf') }}" class="btn" download="Marishel_Lochan_Resume.pdf">Download Resume</a>
             </div>
         </div>
     </section>
@@ -86,6 +86,7 @@
                     <li>🏆 2025 ICPC Caribbean Finals Qualifier</li>
                     <li>🏆 UWI DCIT Runtime Coding Competition - Certificate of Recognition</li>
                     <li>🏆 DataCamp Python Certificates (Introduction & Intermediate Python)</li>
+                    <li>🏆 Deloitte Australia - Data Analytics Job Simulation Certificate (Forage) Certificate </li>
                 </ul>
             </div>
         </div>
@@ -95,14 +96,19 @@
         <h2>Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <embed src="Project- Investigating Netflix Movies - DataCamp.pdf#page=1" type="application/pdf" class="project-preview" />
-                <h3>Title</h3>
+                <h3>Investigating Netflix Movies</h3>
+                <img src="{{ url_for('static', filename='netflix.png') }}" alt="Netflix Project" class="project-image">
                 <a href="/Project- Investigating Netflix Movies - DataCamp.pdf" target="_blank" class="btn">View</a>
             </div>
             <div class="project-card">
-                <embed src="project2.pdf#page=1" type="application/pdf" class="project-preview" />
-                <h3>Title</h3>
-                <a href="/project2.pdf" target="_blank" class="btn">View</a>
+                <h3>Financial Ratios Excel Database</h3>
+                <img src="{{ url_for('static', filename='stat.jpg') }}" alt="Excel Project" class="project-image">
+                <a href="/excelProject" target="_blank" class="btn">View</a>
+            </div>
+            <div class="project-card">
+                <h3>AirBnB Listings Analysis</h3>
+                <img src="{{ url_for('static', filename='airbnb.png') }}" alt="AirBnB Project" class="project-image">
+                <a href="/airbnbProject" target="_blank" class="btn">View</a>
             </div>
         </div>
     </section>

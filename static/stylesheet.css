@@ -321,6 +321,14 @@ nav {
     background-color: #e09be0;
 }
 
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 #contact {
     background-color: #fbeefb;
     padding: 20px 20px;
