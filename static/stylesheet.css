@@ -71,6 +71,25 @@ nav {
     color: #e09be0;
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 .section {
     width: 100%;
     min-height: 100vh;
@@ -651,5 +670,136 @@ nav {
 
     .project-card {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5em;
+    }
+
+    .about-text p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .resume-item {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .resume-item h3 {
+        font-size: 1em;
+    }
+
+    .resume-item ul {
+        font-size: 0.8em;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-preview {
+        height: 120px;
+    }
+
+    .contact-info {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #f4a4f4;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: #e09be0;
+        border-radius: 5px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px; 
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 90%; 
+        max-width: 350px;
+        margin: 0 auto; 
+    }
+
+    .project-preview {
+        width: 100%; 
+        height: auto; 
     }
 }

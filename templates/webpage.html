@@ -13,12 +13,17 @@
                 <img src="{{ url_for('static', filename='flower3-svgrepo-com.svg') }}" alt="Flower Icon" class="nav-icon">
                 <span>MARISHEL</span>
             </div>
-            <div class="nav-links">
-                <a href="#about">About Me</a>
-                <a href="#resume">Resume</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -142,6 +147,10 @@
                     });
                 }
             });
+        });
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
         });
     </script>
 </body>
