@@ -16,7 +16,7 @@ def get_project2():
 
 @app.route('/airbnbProject', methods=['GET'])
 def get_project3():
-    return redirect('static/Airbnb_Listings.html')
+    return redirect('Airbnb_Listings.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
