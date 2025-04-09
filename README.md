@@ -53,5 +53,4 @@ If you'd like to get in touch, feel free to reach out via:
 ---
 
 Thank you for visiting my portfolio repository! 🌟
-```
 
